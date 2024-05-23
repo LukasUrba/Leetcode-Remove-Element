@@ -8,17 +8,21 @@ public class Main {
     }
 
     public static int removeElement (int[] nums, int val) {
-        int counter = 0;
+        int counter = nums.length;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == val){
-                counter++;
-                if (i<nums.length-1){
+                counter--;
+                if (i==0) {
                     nums[i]=nums[i+1];
+                } else if (i<nums.length-1&& i >0){
+                    nums[i]=nums[nums.length-i];
+
                 } else {
                     nums[i]=51;
                 }
             }
         }
+
         return counter;
     }
 }
