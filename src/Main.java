@@ -12,7 +12,7 @@ public class Main {
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == val){
                 counter--;
-                if (i==0) {
+                if (i==0 && nums.length>1) {
                     nums[i]=nums[i+1];
                 } else if (i<nums.length-1&& i >0){
                     nums[i]=nums[nums.length-i];
